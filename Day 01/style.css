@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+	background: linear-gradient(to top right, #433ba0 0%, #4ec4c9 100%);
+  color: #fff;
+  font-family: 'Courier New', 'Courier', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+h1 {
+	display: flex;
+	margin: 0;
+}
+
+h1 > * {
+	box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
+	position: relative;
+}
+
+h1 .zero {
+	width: 100px;
+	height: 100px;
+	border: 24px solid white;
+	border-radius: 50%;
+	box-sizing: border-box;
+	right: 7px;
+	z-index: 1;
+}
+
+h1 .zero:nth-of-type(4) {
+	right: 24px;
+	z-index: 0;
+}
+
+h1 .one {
+	width: 24px;
+	height: 100px;
+	background: #FFF;
+	left: 2px;
+	z-index: 3;
+	border-radius: 2px;
+}
+
+h1 .t {
+	width: 20px;
+	height: 40px;
+	background: white;
+	border-radius: 2px;
+	left: 6px;
+	top: 1px;
+	transform: rotate(45deg);
+}
+
+.days {
+	padding-left: 20px;
+	display: block;
+	position: relative;
+	margin: 0;
+	font-size: 82px;
+	font-weight: 700;
+	letter-spacing : 0.02em;
+	text-transform: uppercase;
+	line-height: 60px;
+}
+
+.text {
+	padding-left: 16px;
+	display: block;
+	position: relative;
+	margin: 0;
+	font-size: 23px;
+	font-weight: 700;
+	letter-spacing : 0.02em;
+	text-transform: uppercase;
+	line-height: 20px;
+	left: 6px;
+}

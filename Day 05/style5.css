@@ -74,7 +74,7 @@
 .red_line {
   height: 4px;
   width: 20px;
-  background-color: rgb(194, 31, 31);
+  background-color: rgb(218, 82, 82);
   border-radius: 2px;
   margin-right: 10px;
 }
@@ -82,7 +82,7 @@
 .blue_line {
   height: 4px;
   width: 20px;
-  background-color: rgb(34, 8, 203);
+  background-color: rgb(76, 121, 236);
   border-radius: 2px;
   margin-right: 10px;
 }

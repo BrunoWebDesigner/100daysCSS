@@ -26,6 +26,7 @@
 }
 
 .box1 {
+  position: relative;
   text-align: center;
   align-items: center;
   height: 100%;
@@ -54,8 +55,8 @@ img {
 /* CIRCULAR BORDER WITH MOVEMENTS */
 .circular2 {
   position: absolute;
-  top: 113px;
-  right: 303px;
+  top: 24px;
+  right: 57.5px;
   width: 90px;
   height: 90px;
   border-radius: 50%;

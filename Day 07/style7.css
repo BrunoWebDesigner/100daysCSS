@@ -17,18 +17,72 @@
   margin: 0 auto;
   margin-top: 50px;
   font-family: 'Open Sans', Helvetica, sans-serif;
+  overflow: hidden;
 }
 
 .frame {
   display: flex;
-  align-items: top;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: top;
   width: 300px;
   height: 300px;
   background-color: rgb(240, 240, 240);
   border-radius: 3px;
   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
 }
+
+.frame.active {
+  transform: translateX(150px);
+}
+
+/* -------- NAVBAR WITH MOVEMENT -------- */
+.navBar {
+  display: flex;
+  position: absolute;
+  align-items: left;
+  text-align: left;
+  justify-content: left;
+	width: 180px;
+	height: 270px;
+  left: 50%;
+  top: 50%;
+	background: #43627D;
+	border-radius: 3px;
+	transition: all .5s ease-in-out;
+  transform: translate(-150px, -351px);
+  z-index: 0;
+}
+
+.navBar.active {
+  transform: translate(-170px, -351px);
+}
+
+ul {
+  margin: 0;
+  padding: 10px 0;
+}
+
+li {
+  margin: 0;
+  list-style: none;
+  color: rgba(201, 214, 227, 0.7);
+  padding: 14px 50px 14px 15px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+span {
+  margin-right: 10px;
+}
+
+li:hover {
+  color: #fff;
+  background: #385269;
+}
+/* --------------------------------------------------------- */
+
 
 .headerBox {
   display: flex;
@@ -50,6 +104,13 @@
   width: 25%;
   background-color: rgb(95, 152, 205);
   position: relative;
+  cursor: pointer;
+}
+
+.toggle:hover > .line1,
+.toggle:hover > .line2,
+.toggle:hover > .dot {
+  background-color: #fff;
 }
 
 .line1,
@@ -60,6 +121,7 @@
   margin-top: 5px;
   margin-bottom: 4px;
   border-radius: 2px;
+  transition: all .3s ease-in-out;
 }
 
 .dot {
@@ -71,6 +133,7 @@
   width: 8px;
   border-radius: 4px;
   box-shadow: -2px 0 rgb(95, 152, 205);
+  transition: all .3s ease-in-out;
 }
 /* --------------------------------------------------------- */
 
@@ -80,7 +143,7 @@
   font-weight: 700;
 }
 
-.searchIconBox {
+#searchIconBox {
   position: relative;
   display: flex;
   align-items: center;
@@ -91,12 +154,20 @@
 }
 
 .searchIcon {
+  position: absolute;
   font-size: 20px;
   color: rgb(182, 214, 244);
   margin-left: 15px;
+  z-index: 2;
+  transition: all .3s ease;
+  cursor: pointer;
 }
 
-#input {
+.searchIcon:hover {
+  color: white;
+}
+
+.input {
   box-sizing: border-box;
   border: none;
   position: absolute;
@@ -108,11 +179,78 @@
   color: #666;
   padding: 0 16px;
   border: none;
-  display: none;
+  transition: all .3s ease-in-out;
+  transform: translateX(15px);
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
 }
 
-#input:focus {
+.input:focus {
   outline:none;
+}
+
+.input.active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mainBox {
+  display: flex;
+  height: 240px;
+  overflow: hidden;
+}
+
+.lineVertical {
+  display: flex;
+  justify-content: right;
+  height: 100%;
+  width: 50px;
+}
+
+.lineVertical1 {
+  height: 100%;
+  width: 3px;
+  background-color: rgb(224, 222, 222);
+  margin-right: 10px;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-evenly;
+  color: rgb(100, 100, 100);
+}
+
+
+.time {
+  font-size: 12px;
+}
+
+.comment {
+  font-size: 14px;
+}
+
+.dot1 {
+  position: absolute;
+  background-color: rgb(95, 152, 205);
+  height: 10px;
+  width: 10px;
+  border-radius: 8px;
+  top: 1px;
+  left: -18px;
+  border: 2px solid rgb(240, 240, 240);
+}
+
+.firstInfo {
+  position: relative;
+}
+
+.secondInfo {
+  position: relative;
+}
+
+.thirdInfo {
+  position: relative;
 }

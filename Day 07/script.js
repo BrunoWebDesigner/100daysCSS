@@ -1,30 +1,23 @@
-/* document.addEventListener("DOMContentLoaded", function () {
-  const divClique = document.querySelector(".searchIconBox");
-  const divOculta = document.querySelector(".input");
 
-  let isVisible = false;
+/* const toggleButton = document.getElementById('searchIcon');
+const minhaDiv = document.getElementById('input');
 
-  divClique.addEventListener("click", function () {
-      if (!isVisible) {
-          divOculta.style.opacity = 1;
-      } else {
-          divOculta.style.opacity = 0;
-      }
-
-      isVisible = !isVisible;
-  });
+toggleButton.addEventListener('click', () => {
+    if (minhaDiv.classList.contains('escondido')) {
+        minhaDiv.classList.remove('escondido');
+        minhaDiv.classList.add('visivel');
+    } else {
+        minhaDiv.classList.remove('visivel');
+        minhaDiv.classList.add('escondido');
+    }
 }); */
 
-var div2 = document.getElementById("input");
-var div2Visivel = false;
+document.querySelector('.searchIcon').addEventListener('click', function() {
+    document.querySelector('.input').classList.toggle('active');
+});
 
-function mostrarDiv2() {
-    if (div2Visivel) {
-        div2.style.display = "none";
-    } else {
-        div2.style.display = "block";
-        div2.style.opacity = "100%";
 
-    }
-    div2Visivel = !div2Visivel;
-}
+document.querySelector('.toggle').addEventListener('click', function() {
+    document.querySelector('.frame').classList.toggle('active');
+    document.querySelector('.navBar').classList.toggle('active');
+});

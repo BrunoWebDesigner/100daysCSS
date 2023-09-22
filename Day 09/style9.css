@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 100px;
+    height: 400px;
+    width: 400px;
+    background-color: #1A2238;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 23%;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    z-index: 4;
+}
+
+.degree {
+    position: left;
+    width: 25%;
+    font-size: 50px;
+    padding: 10px 10px 10px 20px;
+    font-weight: 200;
+}
+
+.wind {
+    position: left;
+    width: 45%;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.days {
+    text-align: right;
+    width: 8%;
+    font-size: 15px;
+    padding: 10px;
+    font-weight: 200;
+}
+
+.degreesNumber {
+    width: 22%;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.night {
+    position: relative;
+}
+
+.montain1 {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: #303C5D;
+    top: -60px;
+    left: 50px;
+    z-index: 3;
+}
+
+.montain2 {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: #303C5D;
+    top: -80px;
+    left: -180px;
+    z-index: 3;
+}
+
+.montain3 {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: #303C5D;
+    top: -60px;
+    left: -380px;
+    z-index: 3;
+}
+
+.montain4 {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: #26314F;
+    top: -100px;
+    left: -80px;
+    z-index: 2;
+}
+
+.montain5 {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: #26314F;
+    top: -100px;
+    left: -320px;
+    z-index: 2;
+}
+
+.moon {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    top: -260px;
+    left: -140px;
+    background-color: #F6EDBD;
+    
+    z-index: 1;
+}

@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 8px;
+    background-image: url('https://scontent.ftll3-1.fna.fbcdn.net/v/t1.18169-9/10550919_270229569851149_3144078203965033719_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=e3f864&_nc_ohc=M8Qi3j7OAZYAX_Y18e_&_nc_ht=scontent.ftll3-1.fna&oh=00_AfBHW2c7qAge_rQu72hUzJFqPoSknmVQvL-q8RbKi3SQmQ&oe=653A0F7A'); /* Replace 'path-to-your-image.jpg' with the actual path to your image */
+    background-size: cover; /* This ensures the image covers the entire div */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the div */
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+.circle {
+    position: relative;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background: rgb(36, 36, 36);
+    border: 7px solid rgb(56, 56, 56);
+    text-align: center;
+}
+
+.date {
+	position: absolute;
+	top: 68px;
+	width: 100%;
+}
+
+.time {
+	position: absolute;
+	top: 80px;
+	width: 100%;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 100%;
+	margin: 4px 0;
+}
+
+.time span {
+    animation: infinite-opacity 1s ease-in-out infinite;
+}
+
+.heart {
+	position: absolute;
+	top: 129px;
+	left: 57px;
+}
+
+.heart span {
+    color: rgb(248, 91, 91);
+    font-size: 10px;
+    float: left;
+    margin-top: 1px;
+    margin-right: 4px;
+    animation: beat 1s ease-in-out infinite;
+}
+
+.energy {
+	position: absolute;
+	top: 129px;
+	right: 55px;
+}
+
+.spinner {
+	position: absolute;
+	width: 202px;
+	height: 202px;
+	border-radius: 50%;
+	top: 5px;
+	left: 5px;
+
+}
+
+.spinner circle {
+	stroke: #F85B5B;
+	stroke-width: 3;
+	fill: none;
+	stroke-dasharray: 625;
+	animation: spinner 8s linear infinite;
+	transform-origin: center center;
+	transform: rotate(-90deg);
+}
+
+.dotted-circle {
+    position: absolute;
+	top: 14px;
+	left: 14px;
+    width: 180px;
+    height: 180px;
+    border: 2px dotted rgb(219, 219, 219); /* Change the color as desired */
+    border-radius: 50%; /* Creates a circular shape */
+}
+
+@keyframes beat {
+	0% {
+		transform: scale(1);
+	}
+	35% {
+		transform: scale(1.2);
+	}
+}
+
+@keyframes infinite-opacity {
+    0% {
+      opacity: 0; /* Start with fully transparent */
+    }
+    50% {
+      opacity: 1; /* Midpoint of the animation, fully opaque */
+    }
+    100% {
+      opacity: 0; /* End with fully transparent */
+    }
+  }
+
+  @keyframes spinner {
+	from {
+		stroke-dashoffset: 625;
+		transform: rotate(-90deg) scaleY(1);
+	}
+	50% {
+		stroke-dashoffset: 0;
+		transform: rotate(-90deg) scaleY(1);
+	}
+	50.001% {
+		transform: rotate(-90deg) scaleY(-1);
+	}
+	to {
+		stroke-dashoffset: 625;
+		transform: rotate(-90deg) scaleY(-1);
+	}
+}
